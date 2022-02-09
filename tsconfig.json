@@ -1,26 +1,40 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "outDir": "./public/dist/",
+        "preserveConstEnums": true,
+        // "removeComments": true,
+        "sourceMap": true,
+        "target": "esnext",
+        "noEmit": true,
+        "strict": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["es6", "dom", "dom.iterable", "esnext"],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "typeRoots": [
+        "./node_modules/@types",
+        "./typings",
+        "./src/openstackit/typings"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+    "include": [
+        "./src/**/*",
+        "./typings/*.d.ts",
+        "./typings/**/*.d.ts",
+        "./src/openstackit/typings/*.d.ts"
+    ],
+    "exclude": ["node_modules/**/*", "./src/stories/**/*"],
+    "files": [
+        "node_modules/@types/react-dom/index.d.ts",
+        "node_modules/@types/react/index.d.ts"
+    ]
 }
