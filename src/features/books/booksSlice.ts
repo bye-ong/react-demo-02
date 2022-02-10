@@ -3,7 +3,6 @@ import {
     createSelector,
     createEntityAdapter,
     createSlice,
-    CombinedState,
 } from '@reduxjs/toolkit';
 
 export type TBook = {

@@ -4,10 +4,13 @@ import booksReducer, { books } from '../features/books/booksSlice';
 
 import counterReducer, { counter } from '../features/counter/counterSlice';
 
+import cardReducer, { card } from '../features/card/cardSlice';
+
 export const rootReducer = combineReducers({
     [COMMON]: commonReducer,
     [books]: booksReducer,
     [counter]: counterReducer,
+    [card]: cardReducer,
 });
 
 const createStore = () => {
